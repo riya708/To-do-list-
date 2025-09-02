@@ -1,0 +1,135 @@
+
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: Black;
+  font-weight: 700;
+
+  background-image: url(./background\ img.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Container */
+.todo-container {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.title {
+  margin: 0 0 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Add task area */
+.add-task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #fcb69f;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+   transition: 0.3s; 
+}
+
+.add-task input:focus {
+  border-color: #ff7b54;
+}
+
+.add-task button {
+  margin-left: 10px;
+  border: none;
+  background: #ff7b54;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0 12px;
+  transition: background 0.3s; 
+}
+
+.add-task button:hover {
+  background: #ff5722;
+}
+
+/* Task List */
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  background: #fff3e0;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.4s ease; 
+  font-size: 15px;
+}
+
+#taskList li span {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+}
+
+#taskList li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #e63946;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s; 
+}
+
+.delete-btn:hover {
+  background: #b71c1c;
+}
+
+Animations
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+} 
